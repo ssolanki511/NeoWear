@@ -1,0 +1,283 @@
+.search-main-container{
+    width: 100%;
+    padding-right: 55px;
+    position: relative;
+}
+.filter-main-open{
+    display: none;
+}
+.filter-open-box{
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Neue Montreal', sans-serif;
+}
+.filter-open-box span{
+    font-size: 17px;
+    color: #504e4e;
+}
+.filter-open-box button{
+    font-size: 15px;
+    color: #fff;
+    background-color: #000000;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 7px 19px;
+}
+.search-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-family: 'Neue Montreal', sans-serif;
+}
+.search-wrapper .filter-box{
+    width: 22%;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px 15px;
+    position: sticky;
+    top: 80px;
+    left: 0px;
+}
+.filter-box .close-icon{
+    text-align: end;
+    font-size: 21px;
+    cursor: pointer;
+    color: #000000;
+    display: none;
+}
+.filter-box .filter-heading{
+    font-family: 'Neue Montreal Bold', sans-serif;
+    font-size: 19px;
+    font-weight: 200;
+    border-bottom: 1px solid black;
+    padding-bottom: 7px;
+    margin-top: 14px;
+    letter-spacing: 0.4px;
+}
+.group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+}
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    font-size: 14px;
+    font-family: 'Neue Montreal', sans-serif;
+    border: 2px solid rgb(208, 210, 216);
+    letter-spacing: 0.9px;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+.search-input::placeholder {
+    color: #9e9ea7;
+}
+.search-input:focus, .search-input:hover {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(190, 193, 206, 0.219);
+}  
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+.filter-box .filter-form form:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.filter-form .input-box{
+    overflow: hidden;
+    margin-top: 10px;
+}
+.filter-form .input-box .dropdown-checkbox{
+    display: none;
+}
+.filter-form .filter-name{
+    font-size: 13px;
+    font-weight: 50;
+    display: block;
+    letter-spacing: 0.7px;
+    transition: all 0.4s ease-in;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: black;
+}
+.filter-name .filter-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.filter-form .input-field{
+    max-height: 280px;
+    transition: all 0.4s ease-in;
+    margin-top: 14px;
+    color: rgb(39, 39, 39);
+}
+.filter-form .input-box:nth-child(3) .input-field{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.input-field-wrapper{
+    width: 100%;
+    position: relative;
+}
+.input-field select{
+    width: 100%;
+    padding: 9px 10px;
+    border-color: #cccccc;
+    appearance: none;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.input-field .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    pointer-events: none;
+    font-size: 13px;
+}
+.input-field .filter-values{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 14px;
+    margin-top: 2px;
+    font-family: 'Neue Montreal', sans-serif;
+    margin-top: 9px;
+}
+.input-field .filter-values input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    border-color: #000000;
+    cursor: pointer;
+}
+.filter-values label{
+    width: 100%;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 1.1px;
+    color: #8f8d8d;
+    cursor: pointer;
+}
+.filter-form .dropdown-checkbox:checked ~ .input-field{
+    max-height: 0px;
+}
+.filter-form input[type="submit"]{
+    width: 100%;
+    padding: 11px 0px;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    margin-top: 24px;
+    cursor: pointer;
+}
+.search-wrapper .products-wrapper{
+    width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px 0px;
+    padding-left: 55px;
+    gap: 25px;
+}
+.products-wrapper .product-box{
+    width: 220px;
+}
+.product-box a{
+    text-decoration: none;
+    color: #000000;
+}
+.product-box .product-img{
+    width: 100%;
+    height: 310px;
+    position: relative;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.product-img span{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 4;
+}
+.product-box .product-name{
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.product-box .product-price{
+    display: flex;
+    gap: 12px;
+    font-size: 15px;
+    margin: 2px 0px;
+}
+.product-box .product-price .current-price{
+    color: #928d8d;
+}
+.product-box .product-price .old-price{
+    color: #928d8d;
+    text-decoration: line-through;
+}
+.product-box .product-offer{
+    color: #6b6868;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+}
+@media (max-width: 1080px) {
+    .filter-box .close-icon{
+        display: block;
+    }
+    .search-wrapper .filter-box{
+        width: 100%;
+        position: fixed;
+        z-index: 5;
+        transform: translateX(100%);
+    }
+    .search-wrapper .products-wrapper{
+        width: 100%;
+        padding: 0px 20px;
+        padding-bottom: 20px;
+    }
+    .search-main-container{
+        padding: 0;
+    }
+    .filter-main-open{
+        display: block;
+    }
+}

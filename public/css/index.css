@@ -1,0 +1,386 @@
+:root{
+    --autoScrollDuration: 6s;
+    --autoScrollItem: 6
+}
+.hero-section{
+    padding: 0px 55px;
+    padding-top: 25px;
+}
+.hero-section h1{
+    font-size: 90px;
+    font-weight: 800;
+    font-family: 'Neue Montreal',sans-serif;
+    letter-spacing: 1px;
+    display: inline-block;
+    word-spacing: 22px;
+}
+.hero-section h1 em{
+    font-family: 'Migra';
+}
+.hero-section-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-section-content-left{
+    width: 40%;
+    position: relative;
+    top: -60px;
+}
+.hero-section-content-left p{
+    width: 80%;
+    font-family: 'Helvetica Mow Text',sans-serif;
+    font-size: 18px;
+    font-weight: 250;
+    letter-spacing: 1.2px;
+}
+.hero-section-content-left .custome-btn{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.hero-section-content-left .custome-btn a{
+    display: block;
+    text-decoration: none;
+    border: none;
+    font-family: 'Touchme',sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+    background-color: transparent;
+    letter-spacing: 1px;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+}
+.hero-section-content-left .custome-btn .btn-line{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+.custome-btn a:hover ~ .btn-line{
+    transform: translateX(0);;
+}
+.hero-section-content-right{
+    width: 60%;
+}
+.swiper {
+    width: 580px;
+    height: 350px;
+    position: relative;
+    margin: 0 auto;
+    top: -80px;
+    left: 50px;
+}
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide video{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+/* Brands */
+.brand-container{
+    padding: 0px 55px;
+}
+.brand-container .brand-wrapper{
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    position: relative;
+}
+.brand-wrapper .brand-box{
+    position: absolute;
+    height: 85px;
+    width: 140px;
+    top: 0px;
+    left: 100%;
+    animation: scrollX var(--autoScrollDuration) linear infinite;
+    animation-delay: calc(var(--autoScrollDuration)/var(--autoScrollItem) * (var(--autoScrollItem) - var(--i)));
+}
+@keyframes scrollX {
+    to{
+        left: -70px;
+    }
+}
+.brand-box img{
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Vision */
+.vision-container{
+    margin-top: 30px;
+    padding: 0px 55px;
+}
+.vision-container h1{
+    font-family: 'Futura Now Headline',sans-serif;
+    text-transform: uppercase;
+    font-size: 15vw;
+    line-height: 13vw;
+}
+.vision-container .vision-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.vision-wrapper .vision-video{
+    width: 100%;
+    height: 35vw;
+    background-color: black;
+    margin-top: 50px;
+}
+.vision-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vision-wrapper .img-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    margin-top: 25px;
+}
+.img-box img{
+    flex: 1 1 calc(33.33% - 40px);
+    height: 34vw;
+    object-fit: cover;
+}
+/* Wears */
+.wears-section{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.wears-section .wears-inner-box{
+    width: 100%;
+    margin-top: 40px;
+    padding: 40px 55px 20px 55px;
+}
+.wears-section .wears-heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wears-heading span{
+    font-family: 'Helvetica Mow Text',sans-serif;
+    font-weight: 50;
+    font-size: 14px;
+}
+.wears-section .wears-heading-line{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: relative;
+}
+.wears-container{
+    margin-top: 30px;
+    position: relative;
+}
+.wears-container ul{
+    list-style: none;
+    font-size: 30px;
+    font-weight: 650;
+    font-family: 'Neue Montreal', sans-serif;
+}
+.wears-container ul li{
+    margin: 20px 0px;
+}
+.wears-container ul li p a{
+    text-decoration: none;
+    color: white;
+}
+.wears-container ul li sup{
+    position: relative;
+    margin-left: 15px;
+}
+.wears-container ul li sup i{
+    font-size:19px;
+    transform: rotateZ(-50deg);
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+    display: none;
+}
+.wears-container ul li hr{
+    border-color: white;
+    margin-top: 20px;
+}
+.wears-container .wears-floting-img{
+    height: 22vw;
+    width: 16vw;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 30;
+    left: 60%;
+    top: 50%;
+    transform: rotateZ(-20deg);
+    display: none;
+    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* about us */
+.about-section{
+    background-color: #9ac1cb;
+    color: black;
+    position: relative;
+    padding-bottom: 70px;
+    overflow-x: hidden;
+}
+.about-section .about-heading{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 55px;
+    position: relative;
+}
+.about-heading h1{
+    font-size: 25vw;
+    font-family: 'Futura Now Headline';
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    font-family: 'Helvetic Neue';
+    letter-spacing: 10px;
+    margin-top: 6vw;
+}
+.nav-scroll-active{
+    background-color: #9ac1cb;
+    color: black
+}
+.about-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 55px;
+}
+.about-main h3{
+    font-size: 2.8vw;
+    font-family: 'Gilroy';
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.about-main h3 span{
+    background-color: rgb(248, 175, 232);
+    border-radius: 40px;
+    padding: 2px 11px;
+    margin: 0px 3px;
+    border: 3px solid black;
+    font-family: 'Mr Stalwart';
+    font-size: 2vw;
+    letter-spacing: 2px;
+}
+.about-main p{
+    width: 70vw;
+    font-size: 1.5vw;
+    font-family: 'Gilroy';
+    text-align: center;
+    color: #000000b4;
+    font-weight: 650;
+    margin-top: 30px;
+    letter-spacing: 0.4px;
+}
+@media (max-width: 1120px) {
+    .hero-section,
+    .brand-container,
+    .vision-container,
+    .about-section .about-heading,
+    .about-main{
+        padding: 0px 35px;
+    }
+    .hero-section h1{
+        font-size: 8vw;
+        word-spacing: 2vw;
+    }
+    .hero-section-content{
+        flex-direction: column;
+    }
+    .hero-section-content-left{
+        margin-top: 20px;
+        width: 100%;
+        top: 0px;
+    }
+    .hero-section-content-right{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .swiper {
+        width: 100%;
+        height: 270px;
+        top: 0px;
+        left: 0px;
+    }
+    .wears-container ul{
+        font-size: 20px;
+    }
+    .wears-container ul li{
+        margin: 10px 0px;
+    }
+    .brand-container .brand-wrapper{
+        width: 100%;
+        height: 70px;
+        margin-top: 30px;
+    }
+    .brand-wrapper .brand-box{
+        width: 130px;
+        height: 70px;
+    }
+    @keyframes scrollX {
+        to{
+            left: -420px;
+        }
+    }
+    .wears-section .wears-inner-box{
+        padding: 20px 35px 10px 35px;
+    }
+}
+@media (max-width: 650px){
+    .swiper{
+        height: 140px;
+    }
+    .vision-container h1{
+        font-size: 14vw;
+    }
+    .vision-wrapper .vision-video{
+        margin-top: 20px;
+    }
+    .vision-wrapper .img-box{
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .about-heading h1{
+        font-size: 21vw;
+    }
+    .about-main h3{
+        font-size: 2.2vw;
+    }
+    .about-main p{
+        font-size: 2.4vw;
+        margin-top: 10px;
+    }
+    @keyframes scrollX {
+        to{
+            left: -620px;
+        }
+    }
+}
